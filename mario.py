@@ -11,7 +11,7 @@ def pyramid_line(leftside, _i):
 
 def main(_n):
     """ A more clean way of implementing a mario pyramid """
-    # init list of size n-1 spaces char and 1 hash char at the end
+    # init list of size n spaces char and 1 hash char at the end
     initline = [' ']*_n + ['#']
     for i in range(_n):
         print(pyramid_line(initline, i))

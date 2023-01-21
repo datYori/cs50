@@ -3,8 +3,9 @@
 """ A more clean way of implementing a mario pyramid """
 def pyramid_line(leftside, _i):
     """ A more clean way of implementing a mario pyramid """
-    # init list of size n-1 spaces char and 1 hash char at the end
+    # change last space in hash
     leftside[(len(leftside)-1)-_i] = '#'
+    # reverse list without modifiying original list
     rightside = leftside[::-1]
     return ''.join(leftside) + '  ' + ''.join(rightside)
 

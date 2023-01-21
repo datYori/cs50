@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-def pyramidLine(l, i):    # init list of size n-1 spaces char and 1 hash char at the end
-    l[(len(l)-1)-i] = '#'
-    oplist = l[::-1]
-    return ''.join(l) + '  ' + ''.join(oplist)
-
-def main(n):
+""" A more clean way of implementing a mario pyramid """
+def pyramid_line(leftside, _i):
+    """ A more clean way of implementing a mario pyramid """
     # init list of size n-1 spaces char and 1 hash char at the end
-    list = [' ']*n + ['#']
-    for i in range(n):
-        print(pyramidLine(list, i))
+    leftside[(len(leftside)-1)-_i] = '#'
+    rightside = leftside[::-1]
+    return ''.join(leftside) + '  ' + ''.join(rightside)
+
+def main(_n):
+    """ A more clean way of implementing a mario pyramid """
+    # init list of size n-1 spaces char and 1 hash char at the end
+    initline = [' ']*_n + ['#']
+    for i in range(_n):
+        print(pyramid_line(initline, i))
 
 if __name__ == '__main__':
     main(8)
